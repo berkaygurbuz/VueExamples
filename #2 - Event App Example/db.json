@@ -13,7 +13,9 @@
       "location": "Meow Town",
       "date": "2019-01-03T21:54:00.000Z",
       "time": "2:00",
-      "attendees": ["Ali"]
+      "attendees": [
+        "Ali"
+      ]
     },
     {
       "id": 8419988,
@@ -43,7 +45,11 @@
       "location": "Puptown ",
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
-      "attendees": ["Ali","Hasan","Çoşkun"]
+      "attendees": [
+        "Ali",
+        "Hasan",
+        "Çoşkun"
+      ]
     },
     {
       "id": 7381299,
@@ -61,6 +67,42 @@
       "location": "maçka parkı",
       "date": "2021-02-02T13:40:00.000Z",
       "time": "20:00",
+      "attendees": []
+    },
+    {
+      "id": 3709795,
+      "user": {
+        "id": "123",
+        "name": "Ali Veli"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "123",
+        "name": "Ali Veli"
+      },
+      "title": "School Meeting",
+      "description": "",
+      "location": "School Garden",
+      "date": "2021-02-26T13:56:00.000Z",
+      "time": "11:00",
+      "attendees": []
+    },
+    {
+      "id": 9273950,
+      "user": {
+        "id": "123",
+        "name": "Ali Veli"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "123",
+        "name": "Ali Veli"
+      },
+      "title": "Good Foods",
+      "description": "Helps farmer",
+      "location": "Ali's Farm",
+      "date": "2021-02-18T14:20:00.000Z",
+      "time": "16:00",
       "attendees": []
     }
   ]
