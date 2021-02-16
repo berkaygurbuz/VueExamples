@@ -140,6 +140,24 @@
       "date": "2021-02-10T11:29:00.000Z",
       "time": "21:00",
       "attendees": []
+    },
+    {
+      "id": 2642899,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "vue js 101",
+      "description": "lessons",
+      "location": "c-303",
+      "date": "2021-04-16T13:50:00.000Z",
+      "time": "11:00",
+      "attendees": []
     }
   ]
 }
