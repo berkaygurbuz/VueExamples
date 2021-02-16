@@ -1,12 +1,19 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import EventService from "../services/EventServices";
+
+import * as user from '../modules/user';
+import * as event from '../modules/event.js'
+import * as notification from '../modules/notification.js'
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  modules: {
+    user,
+    event,
+    notification
+  },
   state: {
-    user: { id: 'abc123', name: 'Adam Jahr' },
     categories: [
       'sustainability',
       'nature',
@@ -15,57 +22,6 @@ export default new Vuex.Store({
       'education',
       'food',
       'community'
-    ],
-    events: [],
-    eventsTotal: 0,
-    event: {}
-  },
-  mutations: {
-    ADD_EVENT(state, event) {
-      state.events.push(event)
-    },
-    SET_EVENTS(state, events) {
-      state.events = events
-    },
-    SET_EVENTS_TOTAL(state, eventsTotal) {
-      state.eventsTotal = eventsTotal
-    },
-    SET_EVENT(state, event) {
-      state.event = event
-    }
-  },
-  actions: {
-    createEvent({ commit }, event) {
-      return EventService.postEvent(event).then(() => {
-        commit('ADD_EVENT', event)
-      })
-    },
-    fetchEvents({ commit }, { perPage, page }) {
-      EventService.getEvents(perPage, page)
-        .then(response => {
-          commit(
-            'SET_EVENTS_TOTAL',
-            parseInt(response.headers['x-total-count'])
-          )
-          commit('SET_EVENTS', response.data)
-        })
-        .catch(error => {
-          console.log('There was an error:', error.response)
-        })
-    },
-    fetchEvent({ commit }, id) {
-      EventService.getEvent(id)
-        .then(response => {
-          commit('SET_EVENT', response.data)
-        })
-        .catch(error => {
-          console.log('There was an error:', error.response)
-        })
-    }
-  },
-  getters: {
-    getEventById: state => id => {
-      return state.events.find(event => event.id === id)
-    }
+    ]
   }
 })

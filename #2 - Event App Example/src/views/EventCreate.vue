@@ -1,5 +1,5 @@
 <template>
-    <div>
+  <div>
     <h1>Create an Event</h1>
     <form @submit.prevent="createEvent">
       <label>Select a category</label>
@@ -43,11 +43,11 @@
   </div>
 </template>
 
-<script>
-import Datepicker from 'vuejs-datepicker';
 
+<script>
+import Datepicker from 'vuejs-datepicker'
 export default {
-   components: {
+  components: {
     Datepicker
   },
   data() {
@@ -64,7 +64,7 @@ export default {
   methods: {
     createEvent() {
       this.$store
-        .dispatch('createEvent', this.event)
+        .dispatch('event/createEvent', this.event)
         .then(() => {
           this.$router.push({
             name: 'event-show',
@@ -72,12 +72,10 @@ export default {
           })
           this.event = this.createFreshEventObject()
         })
-        .catch(() => {
-          console.log('There was a problem creating your event')
-        })
+        .catch(() => {})
     },
     createFreshEventObject() {
-      const user = this.$store.state.user
+      const user = this.$store.state.user.user
       const id = Math.floor(Math.random() * 10000000)
       return {
         id: id,
@@ -92,13 +90,12 @@ export default {
         attendees: []
       }
     }
-   
-}
+  }
 }
 </script>
 
 <style scoped>
-    .field {
-      margin-bottom: 24px;
-    }
+.field {
+  margin-bottom: 24px;
+}
 </style>

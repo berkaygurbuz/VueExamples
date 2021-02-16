@@ -1,11 +1,21 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import service from "../services/service.js";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    movies:[],
+  },
   mutations: {},
-  actions: {},
+  actions: {
+    fetchMovies(){
+      service.fetchMovies().then(res=>{
+        console.log(res.val());
+      })
+    }
+  },
+  getters:{},
   modules: {}
 });
