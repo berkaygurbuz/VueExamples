@@ -158,6 +158,24 @@
       "date": "2021-04-16T13:50:00.000Z",
       "time": "11:00",
       "attendees": []
+    },
+    {
+      "id": 5545964,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "Food #101",
+      "description": "lessons",
+      "location": "kitchen",
+      "date": "2021-02-05T16:17:00.000Z",
+      "time": "18:00",
+      "attendees": []
     }
   ]
 }
