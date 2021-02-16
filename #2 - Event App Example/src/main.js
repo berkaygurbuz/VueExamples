@@ -4,6 +4,9 @@ import router from "./router";
 import store from "./store";
 import BaseIcon from "./components/BaseIcon.vue";
 import 'nprogress/nprogress.css';
+import Vuelidate from 'vuelidate';
+
+Vue.use(Vuelidate);
 
 Vue.component('BaseIcon',BaseIcon);
 
