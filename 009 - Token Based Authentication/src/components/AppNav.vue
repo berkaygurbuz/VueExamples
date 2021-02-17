@@ -3,14 +3,30 @@
     <router-link to="/">
       Home
     </router-link>
-    <router-link to="/dashboard">
+    <router-link v-if="loggedIn" to="/dashboard">
       Dashboard
     </router-link>
+    <router-link v-if="!loggedIn" to="/login" class="button">
+      Login
+    </router-link>
+    <button v-else type="button" class="logoutButton" @click="logout">
+      Logout
+    </button>
   </div>
 </template>
 
 <script>
-export default {}
+import { authComputed } from '../store/helper.js'
+export default {
+  computed: {
+    ...authComputed
+  },
+  methods: {
+    logout () {
+      this.$store.dispatch('logout')
+    }
+  }
+}
 </script>
 
 <style scoped>
