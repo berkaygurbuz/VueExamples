@@ -1,5 +1,4 @@
-# event
-
+# Event App Example
 ## Project setup
 ```
 npm install
