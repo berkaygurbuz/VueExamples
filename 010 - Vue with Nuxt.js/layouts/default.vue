@@ -7,7 +7,20 @@
 
 <script>
 import NavBar from '../components/NavBar.vue';
+
 export default {
+  head() {
+    return{
+      titleTemplate:'%s - Real Word Events',
+      meta: [
+        {
+        hid: 'description',
+        name: 'description',
+        content: 'where you can'
+        }
+      ]
+    }
+  },
   components: {
     NavBar,
   },
