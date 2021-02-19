@@ -46,9 +46,14 @@ export default {
 				{
 					label:'Login',
 					url:'/login'
-				},{
+				},
+				{
 					label:'Dashboard',
 					url:'/dashboard'
+				},
+				{
+					label:'Sign Up',
+					url:'/signup'
 				}
 			]
 		}
